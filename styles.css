@@ -1,0 +1,494 @@
+/* Global Styles */
+body {
+  font-family: 'Jost', sans-serif; 
+  line-height: 1.6; 
+  background-color: #f9f9f9; 
+  color: #333; 
+  margin: 0; 
+  padding: 20px; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montaga', serif;
+  color: #838383; /* Abu-abu gelap untuk heading */
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.7;
+  border-bottom: 2px solid #BDC3C7;
+  padding-bottom: 12px;
+}
+
+p, span {
+  color: #333333; 
+}
+ 
+h1 {
+  font-size: 2.5em; 
+}
+
+h2 {
+  font-size: 2em; 
+  margin-bottom: 2px;
+}
+
+h3 {
+  font-size: 1.85em; 
+  font-weight: bold;
+  color: #333333; 
+}
+
+h4 {
+  font-size: 1.5em; 
+  text-align: left; 
+}
+
+h5 {
+  font-size: 1.25em;
+  text-align: left; 
+}
+
+h6 {
+  font-size: 1em; 
+  text-align: left; 
+}
+
+.container-fluid {
+  background-color: #8f8f8f; 
+  padding: 10px; 
+}
+
+.container-fluid ul {
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
+}
+
+.container-fluid li {
+  display: inline; 
+  margin-right: 15px; 
+}
+
+.container-fluid a {
+  text-decoration: none; 
+  color: white; 
+}
+
+.container-fluid a:hover {
+  text-decoration: underline; 
+}
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Grid Item */
+.grid-item {
+  text-align: center;
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover Effects */
+.grid-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Background Circle */
+.grid-item::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 173, 181, 0.2);
+  border-radius: 50%;
+  z-index: 0;
+  transition: all 0.6s ease;
+}
+
+.grid-item:hover::before {
+  top: -50px;
+  left: -50px;
+  width: 300px;
+  height: 300px;
+  background: rgba(0, 173, 181, 0.4);
+}
+
+/* Caption */
+.grid-item p {
+  font-size: 1.1rem; 
+  line-height: 1.4;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+  color: #2c3e50; 
+}
+
+.grid-item span {
+  font-size: 0.9rem; 
+  color: #555; 
+  display: block;
+  margin-top: 5px;
+}
+
+/* Subscribe Section Styles */
+.subscribe-section {
+  background-color: #787878; 
+  color: #fff; 
+  padding: 40px 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.subscribe-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 300; /* Lighter font weight */
+}
+
+/* Form Styles */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto; /* Responsive grid layout */
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 15px 20px;
+  background-color: #000000; /* Call-to-action button */
+  color: #252525;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #595a59; /* Darker on hover */
+}
+
+/* General Footer Styling */
+.custom-footer {
+  background-color:  #4a424200;  /* Krem lembut */
+  color: #000000;  /* Abu tua untuk teks */
+  padding: 40px;
+  text-align: center;
+  font-family: 'Jost', sans-serif;  /* Font utama */
+  border-top: 1px solid #ccc;
+}
+
+/* Newsletter Section */
+.newsletter-section h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  column-gap: #000000;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 150px;
+}
+
+.newsletter-form button {
+  background-color: #aeaeae;  
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  background-color: #b6b6b6;  /* Warna tombol saat hover */
+}
+
+.consent {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 10px;
+}
+
+/* Handwritten Quote Section */
+.quote-section {
+  margin: 20px 0;
+  font-size: 2rem;
+  font-family: 'Jost', sans-serif;  /* Font untuk tulisan tangan */
+}
+
+.stay-home {
+  color: #000000;  /* Kuning kecokelatan */
+  font-family: 'Jost', sans-serif;
+}
+
+.make-something {
+  color: #000000;  /* Merah pastel */
+  font-family: 'Jost', sans-serif;
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.footer-links a {
+  color: #2c3e50;  
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  color: #323232;  
+}
+
+/* Site Credits */
+.site-credits {
+  font-size: 0.8rem;
+  color: #999;
+  margin: 20px 0;
+}
+
+.site-credits a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.site-credits a:hover {
+  text-decoration: underline;
+}
+
+.back-to-top {
+  margin-top: 30px;
+}
+
+.back-to-top a {
+  color: #000000;  
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-to-top a:hover {
+  text-decoration: underline;
+}
+
+/* Animasi Fade-In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Terapkan animasi di berbagai bagian */
+hgroup, p, figure, form {
+  animation: fadeIn 1s ease-in-out both;
+}
+
+hgroup {
+  animation-delay: 0.2s;
+}
+
+p {
+  animation-delay: 0.4s;
+}
+
+figure {
+  animation-delay: 0.6s;
+}
+
+form {
+  animation-delay: 0.8s;
+}
+
+
+/* Timeline Styles */
+.timeline {
+  border-left: 2px solid #007BFF; /* Use a vibrant color for the border */
+  padding-left: 20px;
+  animation: fadeIn 0.5s ease-in; /* Fade-in animation for timeline */
+}
+
+.timeline-item {
+  margin: 20px 0;
+  transition: transform 0.3s; /* Smooth scale effect on hover */
+  background: white; /* White background for timeline items */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 15px; /* Padding for better content spacing */
+}
+
+.timeline-item:hover {
+  transform: scale(1.03); /* Slightly enlarge on hover */
+}
+
+.timeline-item h4 {
+  margin: 5px 0;
+  color: #007BFF; /* Vibrant color for headings */
+}
+
+/* Mood Board Styles */
+.mood-board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Increased gap for a more spacious layout */
+}
+
+.mood-board img {
+  width: calc(33.333% - 10px);
+  border-radius: 10px; /* More rounded corners */
+  transition: transform 0.3s; /* Smooth zoom effect */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for images */
+}
+
+.mood-board img:hover {
+  transform: scale(1.05); /* Zoom in on hover */
+}
+
+/* FAQ Styles */
+.faq {
+  background-color: #ffffff; /* White background for FAQ */
+  padding: 20px; /* More padding for content */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s; /* Change background color smoothly */
+}
+
+.faq:hover {
+  background-color: #f0f0f0; /* Light gray on hover */
+}
+
+.faq h3 {
+  cursor: pointer;
+  transition: color 0.3s; /* Smooth color change */
+  color: #333; /* Dark color for text */
+}
+
+.faq h3:hover {
+  color: #007BFF; /* Change color on hover */
+}
+
+.faq p {
+  display: none; 
+}
+
+/* Video Container Styles */
+.video-container {
+  display: flex;
+  justify-content: center; /* Center the iframe */
+  margin: 30px 0; /* Add more vertical space */
+  width: 100%; /* Full width */
+  overflow: hidden; /* Hide overflow */
+  position: relative; /* Required for absolute positioning */
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  border-radius: 10px; /* Rounded corners for video */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for video container */
+}
+
+.behind-the-scenes iframe {
+  position: absolute; /* Position absolutely within the container */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  transition: transform 0.3s; /* Smooth scaling */
+}
+
+.behind-the-scenes iframe:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+/* Community Gallery Styles */
+.community-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Increased gap for a more spacious layout */
+}
+
+.community-gallery img {
+  width: calc(33.333% - 10px);
+  border-radius: 10px; /* More rounded corners */
+  transition: transform 0.3s; /* Smooth zoom effect */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for images */
+}
+
+.community-gallery img:hover {
+  transform: scale(1.05); /* Zoom in on hover */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Efek Hover pada tombol */
+button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
+}
+
+/* Efek hover pada gambar */
+figure img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
